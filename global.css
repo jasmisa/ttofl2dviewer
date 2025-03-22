@@ -1,0 +1,11 @@
+body {
+    background: url('210034.png');
+    background-size: cover;
+    background-position: 25% center;
+}
+
+@media screen and (max-width: 1024px) {
+  canvas {
+    width: 60vw;
+  }
+}
