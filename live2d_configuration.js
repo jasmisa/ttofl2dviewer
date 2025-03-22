@@ -19,7 +19,7 @@
  ****************************************************************************************************/
 const live2d_settings = {
     // 基本设置
-    'modelUrl': 'model',                        // 存放模型的文件夹路径，末尾不需要斜杠
+    'modelUrl': 'models',                        // 存放模型的文件夹路径，末尾不需要斜杠
     'tipsMessage': '',           // 看板娘提示消息文件的路径，可以留空不加载
     // 模型设置
     'modelName': '',                      // 默认加载的模型名称，仅在无本地记录的情况下有效
@@ -306,7 +306,7 @@ function loadModel(modelName) {
     // 根据模型版本选择不同的SDK加载
     if (modelVersion === 2) {
         $$(`#${live2dId2}`).style.display = 'block';
-        window.live2dv2.load(live2dId2, `${live2d_settings.modelUrl}/${modelName}/live2d-${modelName}.model.json`);
+        window.live2dv2.load(live2dId2, `${live2d_settings.modelUrl}/${modelName}/Full/${waifu.dataset.id}_${waifu.dataset.model.toLowerCase()}_${waifu.dataset.outfit.toLowerCase()}.model.json`);
     } else if (window.live2dCurrentVersion === modelVersion) {
         window.live2dv4.change(`${live2d_settings.modelUrl}/${modelName}`, `live2d-${modelName}.model3.json`);
     } else {
@@ -654,7 +654,7 @@ color: rgb(64,130,112)
 
 const wrapper = $$('#live2dWrapper');
 if(wrapper){
-	live2d_settings['modelName'] = wrapper.dataset.model;
+	live2d_settings['modelName'] = `${wrapper.dataset.id}${wrapper.dataset.model}/${wrapper.dataset.outfit}`;
 	live2d_settings['screenshotCaptureName'] = wrapper.dataset.model + '.png';
 	initModel();
 	window.downloadCap = blobDownload;
