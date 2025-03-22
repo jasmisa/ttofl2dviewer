@@ -1,0 +1,11 @@
+{
+  "type": 0,
+  "model": "model.moc",
+  "textures": [
+    "textures/texture_00.png"
+  ],
+  "physics": "physics.json",
+  "physics_v2": {
+    "file": "physics.json"
+  }
+}
