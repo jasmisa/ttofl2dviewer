@@ -60,7 +60,7 @@ const live2d_settings = {
 // 模型列表
 const live2d_models = [
 	{
-		name: 'lianhuabloodduck-default',
+		name: '012LianhuaBloodDuck/Default',
 		version: 2
 	}
 ]
