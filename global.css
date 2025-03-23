@@ -2,9 +2,16 @@ body {
     background: url('210034.png');
     background-size: cover;
     background-position: 25% center;
+    display: flex;
+    justify-content: flex-end;
+    flex-direciton: row;
 }
 
 @media screen and (max-width: 425px) {
+  body {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
   canvas {
     width: 100vw;
   }
