@@ -322,7 +322,7 @@ function loadModel(modelName) {
     // 根据模型版本选择不同的SDK加载
     if (modelVersion === 2) {
         $$(`#${live2dId2}`).style.display = 'block';
-        window.live2dv2.load(live2dId2, `${live2d_settings.modelUrl}/${modelName}/Full/${waifu.dataset.id}_${waifu.dataset.model.toLowerCase()}_${waifu.dataset.outfit.toLowerCase()}.model.json`);
+        window.live2dv2.load(live2dId2, `${live2d_settings.modelUrl}/${modelName}/Full/${waifu.dataset.id}_${modelName.split('/')[0].toLowerCase()}_${modelName.split('/')[1].toLowerCase()}.model.json`);
     } else if (window.live2dCurrentVersion === modelVersion) {
         window.live2dv4.change(`${live2d_settings.modelUrl}/${modelName}`, `live2d-${modelName}.model3.json`);
     } else {
