@@ -350,6 +350,8 @@ function loadOtherModel() {
         else
             modelIndex = 0;
     }
+    console.log(filteredModels);
+    console.log(modelIndex);
     if (filteredModels[modelIndex].message) showMessage(filteredModels[modelIndex].message, 3000, true);
     loadModel(`${filteredModels[modelIndex].name}/${filteredModels[modelIndex].outfit}`);
 }
