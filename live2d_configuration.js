@@ -31,7 +31,7 @@ const live2d_settings = {
     // 工具栏设置
     'showToolMenu': false,                       // 显示 工具栏
     'canCloseLive2d': false,                     // 显示 关闭看板娘 按钮
-    'canSwitchModel': false,                     // 显示 模型切换 按钮
+    'canSwitchModel': true,                     // 显示 模型切换 按钮
     'canSwitchHitokoto': false,                  // 显示 一言切换 按钮
     'canTakeScreenshot': true,                  // 显示 看板娘截图 按钮
     'canTurnToHomePage': false,                  // 显示 返回首页 按钮
