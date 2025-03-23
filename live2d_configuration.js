@@ -240,7 +240,7 @@ function initModel() {
     if (!live2d_settings.canTurnToHomePage) $$('.l2d-tools .icon-home').classList.add('hide');
     if (!live2d_settings.canTurnToAboutPage) $$('.l2d-tools .icon-about').classList.add('hide');
     if (!live2d_settings.showVolumeBtn) $$('.l2d-tools .icon-volumeup').classList.add('hide') || $$('.l2d-tools .icon-volumedown').classList.add('hide');
-    $$('.l2d-tools .icon-next').addEventListener('click', () => loadOtherModel());
+    $$('.l2d-tools .icon-next').addEventListener('click', () => loadNextOutfit());
     $$('.l2d-tools .icon-home').addEventListener('click', () => window.location = live2d_settings.homePageUrl)
     $$('.l2d-tools .icon-about').addEventListener('click', () => window.open(live2d_settings.aboutPageUrl))
     $$('.l2d-tools .icon-camera').addEventListener('click', () => {
@@ -337,7 +337,7 @@ function modelStorageGetItem(key) {
     return live2d_settings.modelStorage ? getLS(key) : getSS(key);
 }
 
-function loadOtherModel() {
+function loadNextOutfit() {
     const modelName = modelStorageGetItem('modelName');
     const filteredModels = live2d_models.filter(modelObj => modelObj.name === waifu.dataset.id + waifu.dataset.model);
     let modelIndex = 0;
@@ -354,6 +354,22 @@ function loadOtherModel() {
     loadModel(`${filteredModels[modelIndex].name}/${filteredModels[modelIndex].outfit}`);
 }
 
+function loadCharacter(id, name) {
+    const modelName = `${id}${name}/Default`;
+    const filteredModels = live2d_models.filter(modelObj => modelObj.name === id + name);
+    let modelIndex = 0;
+    if (live2d_settings.modelRandMode) {
+        modelIndex = Math.floor(Math.random() * filteredModels.length + 1) - 1;
+    } else {
+        modelIndex = filteredModels.findIndex(modelObj => `${modelObj.name}/${modelObj.outfit}` === modelName);
+        if (modelIndex < filteredModels.length - 1)
+            modelIndex++;
+        else
+            modelIndex = 0;
+    }
+    if (filteredModels[modelIndex].message) showMessage(filteredModels[modelIndex].message, 3000, true);
+    loadModel(`${filteredModels[modelIndex].name}/${filteredModels[modelIndex].outfit}`);
+}
 
 function loadTipsMessage(result) {
     window.waifu_tips = result;
