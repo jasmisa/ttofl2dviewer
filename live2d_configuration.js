@@ -60,7 +60,23 @@ const live2d_settings = {
 // 模型列表
 const live2d_models = [
 	{
-		name: '012LianhuaBloodDuck/Default',
+		name: '012LianhuaBloodDuck',
+		outfit: 'Default',
+		version: 2
+	},
+	{
+		name: '012LianhuaBloodDuck',
+		outfit: 'CrimsonDusk',
+		version: 2
+	},
+	{
+		name: '012LianhuaBloodDuck',
+		outfit: 'Hellfire',
+		version: 2
+	},
+	{
+		name: '012LianhuaBloodDuck',
+		outfit: 'RedLotus',
 		version: 2
 	}
 ]
@@ -287,7 +303,7 @@ function loadModel(modelName) {
     let modelVersion = 2;
     // 在配置中找到要加载模型的版本
     for (let model of live2d_models) {
-        if (model.name === modelName) {
+        if (`${model.name}/${model.outfit}` === modelName) {
             modelVersion = model.version;
             changePosition(model.position);
             break;
@@ -323,18 +339,19 @@ function modelStorageGetItem(key) {
 
 function loadOtherModel() {
     const modelName = modelStorageGetItem('modelName');
+    const filteredModels = live2d_models.filter(modelObj => modelObj.name == waifu.dataset.model);
     let modelIndex = 0;
     if (live2d_settings.modelRandMode) {
-        modelIndex = Math.floor(Math.random() * live2d_models.length + 1) - 1;
+        modelIndex = Math.floor(Math.random() * filteredModels.length + 1) - 1;
     } else {
-        modelIndex = live2d_models.findIndex(modelObj => modelObj.name === modelName)
-        if (modelIndex < live2d_models.length - 1)
+        modelIndex = filteredModels.findIndex(modelObj => `${modelObj.name}/${modelObj.outfit}` === modelName);
+        if (modelIndex < filteredModels.length - 1)
             modelIndex++;
         else
             modelIndex = 0;
     }
-    if (live2d_models[modelIndex].message) showMessage(live2d_models[modelIndex].message, 3000, true);
-    loadModel(live2d_models[modelIndex].name);
+    if (filteredModels[modelIndex].message) showMessage(filteredModels[modelIndex].message, 3000, true);
+    loadModel(`${filteredModels[modelIndex].name}/${filteredModels[modelIndex].outfit}`);
 }
 
 
