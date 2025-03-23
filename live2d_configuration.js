@@ -594,7 +594,6 @@ const blobDownload = (blob) => {
 
 const waifuStyle = `
 #live2dWrapper {
-${live2d_settings.waifuEdgeSide}px;
 position:fixed;
 bottom:0;
 z-index:998;
