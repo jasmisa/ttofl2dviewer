@@ -339,7 +339,7 @@ function modelStorageGetItem(key) {
 
 function loadOtherModel() {
     const modelName = modelStorageGetItem('modelName');
-    const filteredModels = live2d_models.filter(modelObj => modelObj.name == waifu.dataset.model);
+    const filteredModels = live2d_models.filter(modelObj => modelObj.name === waifu.dataset.id + waifu.dataset.model);
     let modelIndex = 0;
     if (live2d_settings.modelRandMode) {
         modelIndex = Math.floor(Math.random() * filteredModels.length + 1) - 1;
@@ -351,7 +351,6 @@ function loadOtherModel() {
             modelIndex = 0;
     }
     console.log(filteredModels);
-    console.log(modelIndex);
     if (filteredModels[modelIndex].message) showMessage(filteredModels[modelIndex].message, 3000, true);
     loadModel(`${filteredModels[modelIndex].name}/${filteredModels[modelIndex].outfit}`);
 }
