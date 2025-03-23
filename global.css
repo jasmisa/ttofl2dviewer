@@ -26,6 +26,10 @@ body {
 }
 
 @media screen and (max-width: 425px) {
+  #live2dWrapper {
+    left: 0 !important;
+  }
+    
   canvas {
     width: 100vw;
   }
@@ -45,13 +49,13 @@ body {
   .character-selection .selection-wrapper {
     width: 100px;
   }
-}
-
-@media screen and (min-width: 425px) {
+    
   #live2dWrapper {
     left: 10vw !important;
   }
-    
+}
+
+@media screen and (min-width: 425px) {
   canvas {
     width: 80vw;
   }
