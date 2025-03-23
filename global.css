@@ -7,11 +7,23 @@ body {
     flex-direciton: row;
 }
 
+.character-selection {
+    background: rgba(128,202,180,.25);
+    border-radius: 10px;
+    max-width: 600px;
+    width: 50vw;
+}
+
+.character-selection .selection-wrapper {
+    width: 25%;
+}
+
 @media screen and (max-width: 425px) {
   body {
     justify-content: flex-start;
     flex-direction: column;
   }
+    
   canvas {
     width: 100vw;
   }
