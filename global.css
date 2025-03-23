@@ -4,9 +4,9 @@ body {
     background-position: 25% center;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 425px) {
   canvas {
-    width: 60vw;
+    width: 100vw;
   }
 }
 
@@ -15,8 +15,9 @@ body {
     width: 80vw;
   }
 }
-@media screen and (max-width: 425px) {
+
+@media screen and (max-width: 1024px) {
   canvas {
-    width: 100vw;
+    width: 60vw;
   }
 }
