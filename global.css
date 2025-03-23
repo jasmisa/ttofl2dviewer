@@ -13,6 +13,7 @@ body {
     max-width: 600px;
     width: 40vw;
     overflow: auto;
+    display: inline-block;
 }
 
 .character-selection .selection-wrapper {
@@ -39,6 +40,10 @@ body {
   .character-selection {
     max-width: 100%;
     width: 100%;
+  }
+
+  .character-selection .selection-wrapper {
+    width: 100px;
   }
 }
 
