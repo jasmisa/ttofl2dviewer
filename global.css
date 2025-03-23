@@ -13,12 +13,12 @@ body {
     max-width: 600px;
     width: 40vw;
     overflow: auto;
-    display: inline-block;
 }
 
 .character-selection .selection-wrapper {
     width: 25%;
     padding: 10px;
+    display: inline-block;
 }
 
 .character-selection .selection-wrapper img {
