@@ -48,8 +48,8 @@ body {
 }
 
 @media screen and (min-width: 425px) {
-  #live2dwrapper {
-    left: 10vw;
+  #live2dWrapper {
+    left: 10vw !important;
   }
     
   canvas {
