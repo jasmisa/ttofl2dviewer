@@ -354,7 +354,7 @@ function modelStorageGetItem(key) {
 
 function loadNextOutfit() {
     const modelName = modelStorageGetItem('modelName');
-    const filteredModels = live2d_models.filter(modelObj => modelObj.name === waifu.dataset.id + waifu.dataset.model);
+    const filteredModels = live2d_models.filter(modelObj => modelObj.name === modelName.split('/')[0]);
     let modelIndex = 0;
     if (live2d_settings.modelRandMode) {
         modelIndex = Math.floor(Math.random() * filteredModels.length + 1) - 1;
