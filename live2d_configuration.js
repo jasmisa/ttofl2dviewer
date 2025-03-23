@@ -371,19 +371,9 @@ function loadNextOutfit() {
 
 function loadCharacter(id, name) {
     const modelName = `${id}${name}/Default`;
-    const filteredModels = live2d_models.filter(modelObj => modelObj.name === id + name);
-    let modelIndex = 0;
-    if (live2d_settings.modelRandMode) {
-        modelIndex = Math.floor(Math.random() * filteredModels.length + 1) - 1;
-    } else {
-        modelIndex = filteredModels.findIndex(modelObj => `${modelObj.name}/${modelObj.outfit}` === modelName);
-        if (modelIndex < filteredModels.length - 1)
-            modelIndex++;
-        else
-            modelIndex = 0;
-    }
-    if (filteredModels[modelIndex].message) showMessage(filteredModels[modelIndex].message, 3000, true);
-    loadModel(`${filteredModels[modelIndex].name}/${filteredModels[modelIndex].outfit}`);
+    let modelIndex = live2d_models.findIndex(modelObj => `${modelObj.name}/${modelObj.outfit}` === modelName);
+    if (live2d_models[modelIndex].message) showMessage(live2d_models[modelIndex].message, 3000, true);
+    loadModel(`${live2d_models[modelIndex].name}/${live2d_models[modelIndex].outfit}`);
 }
 
 function loadTipsMessage(result) {
