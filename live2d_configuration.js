@@ -78,6 +78,21 @@ const live2d_models = [
 		name: '012LianhuaBloodDuck',
 		outfit: 'RedLotus',
 		version: 2
+	},
+	{
+		name: '028ShreddedJerky',
+		outfit: 'Default',
+		version: 2
+	},
+	{
+		name: '028ShreddedJerky',
+		outfit: 'TurquoiseMagic',
+		version: 2
+	},
+	{
+		name: '028ShreddedJerky',
+		outfit: '暗夜咏叹',
+		version: 4
 	}
 ]
 /****************************************************************************************************/
@@ -324,10 +339,10 @@ function loadModel(modelName) {
         $$(`#${live2dId2}`).style.display = 'block';
         window.live2dv2.load(live2dId2, `${live2d_settings.modelUrl}/${modelName}/Full/${waifu.dataset.id}_${waifu.dataset.model.toLowerCase()}_${modelName.split('/')[1].toLowerCase()}.model.json`);
     } else if (window.live2dCurrentVersion === modelVersion) {
-        window.live2dv4.change(`${live2d_settings.modelUrl}/${modelName}`, `live2d-${modelName}.model3.json`);
+        window.live2dv4.change(`${live2d_settings.modelUrl}/${modelName}/Full`, `live2d-${modelName}.model3.json`);
     } else {
         $$(`#${live2dId4}`).style.display = 'block';
-        window.live2dv4.load(live2dId4, `${live2d_settings.modelUrl}/${modelName}`, `live2d-${modelName}.model3.json`);
+        window.live2dv4.load(live2dId4, `${live2d_settings.modelUrl}/${modelName}/Full`, `live2d-${modelName}.model3.json`);
     }
     window.live2dCurrentVersion = modelVersion;
 }
