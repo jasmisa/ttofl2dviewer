@@ -9,3 +9,14 @@ body {
     width: 60vw;
   }
 }
+
+@media screen and (max-width: 768px) {
+  canvas {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 425px) {
+  canvas {
+    width: 100vw;
+  }
+}
