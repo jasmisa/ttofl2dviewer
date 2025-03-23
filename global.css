@@ -10,14 +10,20 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 425px) {
   canvas {
     width: 80vw;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 768px) {
   canvas {
     width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  canvas {
+    width: unset;
   }
 }
