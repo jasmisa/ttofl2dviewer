@@ -7,6 +7,10 @@ body {
     flex-direciton: row;
 }
 
+#live2dWrapper {
+    left: 0;
+}
+
 .character-selection {
     background: rgba(128,202,180,.25);
     border-radius: 10px;
@@ -27,7 +31,7 @@ body {
 
 @media screen and (max-width: 425px) {
   #live2dWrapper {
-    left: 0 !important;
+    left: 0;
   }
     
   canvas {
@@ -51,7 +55,7 @@ body {
   }
     
   #live2dWrapper {
-    left: 10vw !important;
+    left: 10vw;
   }
 }
 
