@@ -25,13 +25,15 @@ body {
 }
 
 @media screen and (max-width: 425px) {
+  canvas {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
   body {
     justify-content: flex-start;
     flex-direction: column;
-  }
-    
-  canvas {
-    width: 100vw;
   }
 }
 
