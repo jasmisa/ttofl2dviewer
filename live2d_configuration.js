@@ -616,7 +616,7 @@ const blobDownload = (blob) => {
 const waifuStyle = `
 #live2dWrapper {
 position:fixed;
-bottom:0;
+bottom:-25px;
 z-index:998;
 font-size:0
 }
