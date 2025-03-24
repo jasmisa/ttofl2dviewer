@@ -55,13 +55,13 @@ body {
   }
     
   #live2dWrapper {
-    left: 10vw;
+    left: 15vw;
   }
 }
 
 @media screen and (min-width: 425px) {
   canvas {
-    width: 80vw;
+    width: 70vw;
   }
 }
 
