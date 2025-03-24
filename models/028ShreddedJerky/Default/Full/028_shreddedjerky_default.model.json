@@ -57,10 +57,5 @@
   "physics": "physics.json",
   "physics_v2": {
     "file": "physics.json"
-  },
-  "options": {
-    "scale_factor": .7,
-    "tex_type": 0,
-    "shader_type": 0
   }
 }
