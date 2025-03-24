@@ -44,7 +44,7 @@ const live2d_settings = {
     'showCopyMessage': true,                    // 显示复制内容提示，默认只对 '#articleContent' 元素内的复制进行监视，如果你的文章内容不在这个标签下，可以在下方搜索并修改
     'showF12OpenMsg': true,                     // 显示控制台打开提示
     //看板娘样式设置
-    'live2dHeight': 680,                        // 看板娘高度，不需要单位
+    'live2dHeight': 725,                        // 看板娘高度，不需要单位
     'live2dWidth': 500,                         // 看板娘宽度，不需要单位
     'waifuMinWidth': 'disable',                 // 页面小于宽度小于指定数值时隐藏看板娘，例如 'disable'(禁用)，推荐 '1040px'
     'waifuEdgeSide': 'left:0',                 // 看板娘贴边方向，例如 'left:0'(靠左 0px)，'right:30'(靠右 30px)，可以被下面的模型设置覆盖
