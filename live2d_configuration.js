@@ -339,10 +339,10 @@ function loadModel(modelName) {
         $$(`#${live2dId2}`).style.display = 'block';
         window.live2dv2.load(live2dId2, `${live2d_settings.modelUrl}/${modelName}/Full/${modelName.substring(0,3)}_${modelName.substring(3).split('/')[0].toLowerCase()}_${modelName.split('/')[1].toLowerCase()}.model.json`);
     } else if (window.live2dCurrentVersion === modelVersion) {
-        window.live2dv4.change(`${live2d_settings.modelUrl}/${modelName}/Full`, `live2d-${modelName}.model3.json`);
+        window.live2dv4.change(`${live2d_settings.modelUrl}/${modelName}/Full`, `${modelName.substring(0,3)}_${modelName.substring(3).split('/')[0].toLowerCase()}_${modelName.split('/')[1].toLowerCase()}.model3.json`);
     } else {
         $$(`#${live2dId4}`).style.display = 'block';
-        window.live2dv4.load(live2dId4, `${live2d_settings.modelUrl}/${modelName}/Full`, `live2d-${modelName}.model3.json`);
+        window.live2dv4.load(live2dId4, `${live2d_settings.modelUrl}/${modelName}/Full`, `${modelName.substring(0,3)}_${modelName.substring(3).split('/')[0].toLowerCase()}_${modelName.split('/')[1].toLowerCase()}.model3.json`);
     }
     window.live2dCurrentVersion = modelVersion;
 }
