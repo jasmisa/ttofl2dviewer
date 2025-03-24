@@ -91,7 +91,7 @@ const live2d_models = [
 	},
 	{
 		name: '028ShreddedJerky',
-		outfit: '暗夜咏叹',
+		outfit: 'mm',
 		version: 4
 	}
 ]
