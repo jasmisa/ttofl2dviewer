@@ -8,6 +8,13 @@
     "Physics": "150152_dynr_mm.physics3.json",
     "PhysicsV2": {
       "File": "150152_dynr_mm.physics3.json"
+    },
+    "Motions": {
+      "Idle": [
+        {
+          "File": "motions/idle.motion3.json"
+        }
+      ]
     }
   },
   "Controllers": {
