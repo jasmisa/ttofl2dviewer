@@ -51,7 +51,7 @@
   "motions": {
     "tap": [
       {
-        "file": "sikao.mtn",
+        "file": "motions/sikao.mtn",
         "wrap_mode": 2,
         "sound": "dialogue/灯影牛肉-Default-006-EN.ogg",
         "language": "en"
@@ -74,11 +74,11 @@
   "expressions": [
     {
       "name": "Mad",
-      "file": "shengqi.exp.json"
+      "file": "expressions/shengqi.exp.json"
     },
     {
       "name": "Idle",
-      "file": "idle.exp.json"
+      "file": "expressions/idle.exp.json"
     }
   ],
   "physics": "physics.json",
