@@ -60,7 +60,7 @@
     "idle": [
       {
         "name": "Idle",
-        "file": "idle.mtn",
+        "file": "motions/idle.mtn",
         "wrap_mode": 1,
         "expression": "Idle"
       }
