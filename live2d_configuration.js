@@ -93,6 +93,11 @@ const live2d_models = [
 		name: '028ShreddedJerky',
 		outfit: 'mm',
 		version: 3
+	},
+	{
+		name: 'Rice',
+		outfit: 'Default',
+		version: 3
 	}
 ]
 /****************************************************************************************************/
