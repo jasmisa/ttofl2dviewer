@@ -62,5 +62,26 @@
   },
   "Options": {
     "TexType": 0
-  }
+  },
+  "Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		}
+	],
+	"HitAreas": [
+		{
+			"Id": "HitAreaBody",
+			"Name": "Body"
+		}
+	]
 }
