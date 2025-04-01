@@ -7,6 +7,7 @@
 			"textures/texture_01.png"
 		],
 		"Physics": "Rice.physics3.json",
+		"DisplayInfo": "Rice.cdi3.json",
 		"Motions": {
 			"Idle": [
 				{
